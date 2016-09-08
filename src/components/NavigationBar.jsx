@@ -16,10 +16,9 @@ export default class NavigationBar extends Component{
 			        <div className="form-group">
 			          <input type="text" className="form-control" placeholder="Where to?"></input>
 			        </div>
-			        <button type="submit" className="btn btn-default">Submit</button>
 			      </form>
 			      
-			      <NavDropdown eventKey={3} title="Wenqian" id="basic-nav-dropdown" className="nav navbar-nav navbar-right">
+			      <NavDropdown eventKey={3} title="Wenqian" id="basic-nav-dropdown" >
 			        <MenuItem eventKey={3.1}>Your Trips</MenuItem>
 			        <MenuItem divider />
 			        <MenuItem eventKey={3.2}>Wish Lists</MenuItem>
