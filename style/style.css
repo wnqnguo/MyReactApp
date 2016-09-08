@@ -10,3 +10,9 @@
 input{
 	width:100%;
 }
+h2{
+	font-weight: bold;
+}
+h4{
+	font-weight: normal;
+}

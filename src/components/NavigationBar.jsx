@@ -1,6 +1,17 @@
 import React, { Component } from'react';
+import ReactDOM from 'react-dom'
 import { Navbar, Nav , NavItem, NavDropdown, MenuItem} from 'react-bootstrap';
 export default class NavigationBar extends Component{
+	
+	constructor(props){
+		super(props);
+		this.state = { term: ''};
+		this.onInputChange = this.onInputChange.bind(this);
+	}
+	onInputChange(event){
+		var autocomplete = new google.maps.places.Autocomplete(ReactDOM.findDOMNode(this.refs.searchInput));
+
+	}
 	render(){
 		return(
 			<div>
@@ -14,7 +25,12 @@ export default class NavigationBar extends Component{
 			      
 			      <form className="navbar-form navbar-left">
 			        <div className="form-group">
-			          <input type="text" className="form-control" placeholder="Where to?"></input>
+			          <input
+			           ref="searchInput"
+			           type="text" 
+			           className="form-control" 
+			           placeholder="Where to?"
+			           onChange={this.onInputChange}></input>
 			        </div>
 			      </form>
 			      
