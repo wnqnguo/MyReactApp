@@ -7,6 +7,9 @@ module.exports = {
     publicPath: '/',
     filename: 'bundle.js'
   },
+  resolve:{
+    extensions: ['','.js','.jsx','.json']
+  },
   module: {
     loaders: [{
       exclude: /node_modules/,

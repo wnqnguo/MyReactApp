@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import SearchBar from '../containers/search_bar'
+import NavigationBar from './NavigationBar'
 export default class App extends Component {
   render() {
     return (
-      <div><SearchBar /></div>
+      <div><NavigationBar /></div>
     );
   }
 }
