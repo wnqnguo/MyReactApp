@@ -16,3 +16,11 @@ h2{
 h4{
 	font-weight: normal;
 }
+.searchbar{
+	position: absolute;
+	top:40;
+	z-index: -5;
+}
+.search-dropdown{
+	background-color: black;
+}

@@ -1,9 +1,10 @@
 import React, { Component } from'react';
 export default class SearchDropDown extends Component{
+	
 	render(){
 		return(
 			<div>
-				<div class="row">
+				<div class="search-dropdown">
 					<div className="col-md-1" >
 						<div class="form-group">
     						<label>Check in</label>

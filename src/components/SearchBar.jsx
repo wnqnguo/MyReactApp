@@ -4,7 +4,7 @@ export default class SearchBar extends Component{
 	render(){
 		return(
 			<div>
-				<div className="row">
+				<div className="row searchbar">
 					<div className="col-md-5" >
 						<input placeholder="Where to?"/>
 					</div>

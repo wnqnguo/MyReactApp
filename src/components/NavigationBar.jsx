@@ -20,7 +20,7 @@ export default class NavigationBar extends Component{
 	}
 	render(){
 		return(
-			<div>
+			<div class="navigationbar">
 				 <Navbar>
     				<Navbar.Header>
       					<Navbar.Brand>
@@ -49,7 +49,7 @@ export default class NavigationBar extends Component{
 			      </NavDropdown>
 			    </Nav>
  			 </Navbar>
- 			 { this.state.showDropDown ? <SearchDropDown /> : null }
+ 			 { this.state.showDropDown ? <SearchDropDown className="search-dropdown" /> : null }
 			</div>
 		)
 	}
