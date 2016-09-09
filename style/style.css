@@ -16,10 +16,9 @@ h2{
 h4{
 	font-weight: normal;
 }
-.searchbar{
-	position: absolute;
-	top:40;
-	z-index: -5;
+header img {
+  display: block;
+  margin: 0 auto 20px;
 }
 .search-dropdown{
 	background-color: black;

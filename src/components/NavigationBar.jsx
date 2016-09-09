@@ -14,7 +14,7 @@ export default class NavigationBar extends Component{
 		var that = this;
 		google.maps.event.addListener(autocomplete, 'place_changed', function() {
     		that.setState({showDropDown:true});
-    	console.log('blah')
+    	console.log('place',autocomplete.getPlace());
     	
 	});
 	}

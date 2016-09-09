@@ -4,10 +4,10 @@ export default class Header extends Component{
 		return(
 			<div>
 				<header>
-		        	<div class="container">
-		            <div class="row">
-		                <div class="col-lg-12">
-		                    <img class="img-responsive" src="../../style/assets/Header.jpg" alt=""/>
+		        	<div className="container">
+		            <div className="row">
+		                <div className="col-lg-12">
+		                    <img className="img-responsive" src="../../style/assets/Header.jpg" alt=""/>
 		                   
 		                </div>
 		            </div>
