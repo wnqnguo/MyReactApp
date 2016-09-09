@@ -21,8 +21,31 @@ header img {
   margin: 0 auto 20px;
 }
 .search-dropdown{
-	background-color: black;
+	background-color: white;
+	position: absolute !important;
+	z-index: 1000;
+	border:1px solid #dce0e0;
+	max-width: 357px;
+	width: 100%;
 }
 img{
 	width: 100%
+}
+.section-container{
+	position: absolute !important;
+ 	top:40;
+ 	z-index: -5;
+}
+checkbox{
+	position: relative;
+	height: 1.25em;
+	width: :1.25em;
+	margin-bottom: -0.25em;
+	margin-right: 5px;
+	vertical-align: top;
+}
+.menu-item{
+	padding: :12px 0;
+	border-bottom:  1px solid #dce0e0;
+	cursor: pointer;
 }
