@@ -1,16 +1,22 @@
 import React, { Component } from'react';
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom';
+import SearchDropDown from './SearchDropDown'
 import { Navbar, Nav , NavItem, NavDropdown, MenuItem} from 'react-bootstrap';
 export default class NavigationBar extends Component{
 	
 	constructor(props){
 		super(props);
-		this.state = { term: ''};
+		this.state = { term: '', showDropDown:false};
 		this.onInputChange = this.onInputChange.bind(this);
 	}
 	onInputChange(event){
 		var autocomplete = new google.maps.places.Autocomplete(ReactDOM.findDOMNode(this.refs.searchInput));
-
+		var that = this;
+		google.maps.event.addListener(autocomplete, 'place_changed', function() {
+    		that.setState({showDropDown:true});
+    	console.log('blah')
+    	
+	});
 	}
 	render(){
 		return(
@@ -43,6 +49,7 @@ export default class NavigationBar extends Component{
 			      </NavDropdown>
 			    </Nav>
  			 </Navbar>
+ 			 { this.state.showDropDown ? <SearchDropDown /> : null }
 			</div>
 		)
 	}
