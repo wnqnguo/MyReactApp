@@ -35,33 +35,39 @@ export default class SearchDropDown extends Component{
 	  						</div>
 						</div>
 					</div>
-					<div >
-						<ul className="list-group">
-							<li className="list-group-item">
-								<div className="panel-header">Room type</div>
-							</li>
-							 <li className="list-group-item ">
-									<label className="menu-item" for="room_type_0">
-										<input type="checkbox" id="room_type_0" 
-								         value="Entire home/apt"/>
-										<span>Entire home/apt</span>
-									</label>
-								</li>
-								<li className="list-group-item">
-									<label>
-										<input type="checkbox"
-												value="Private room"/>
-										<span>Private room</span>
-									</label>
-								</li>
-								<li className="list-group-item"> 
-									<label className="checkbox">
-										<input type="checkbox" 
-												value="Share room" />
-										<span>Share room</span>
-									</label>
-								</li>
-							</ul>
+					
+						<fieldset>
+						    <div className="panel panel-default">
+							<div className="panel-header menu-header">
+								<legend>Room type</legend>
+							</div>
+							<div className="panel-body">
+							<div>
+								<label className="checkbox menu-item">
+									<input type="checkbox"/>
+									<i className="icon icon-private-romom-horizontal-margin-medium"/>
+									<span>Private room</span>
+								</label>
+								<label className="checkbox menu-item">
+									<input type="checkbox"/>
+									<i className="icon icon-private-romom-horizontal-margin-medium"/>
+									<span>Private room</span>
+								</label>
+								<label className="checkbox menu-item">
+									<input type="checkbox"/>
+									<i className="icon icon-private-romom-horizontal-margin-medium"/>
+									<span>Private room</span>
+								</label>
+							 </div>
+							</div>
+							</div>
+						</fieldset>
+						<div className="panel-body">
+						<button className="btn btn-primary btn-block">
+							<i className ="icon icon-search"/>
+							<span>Find a place</span>
+						</button>
+						
 					</div>
 				</div>
 			</div>

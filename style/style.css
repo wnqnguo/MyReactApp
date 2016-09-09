@@ -36,16 +36,29 @@ img{
  	top:40;
  	z-index: -5;
 }
-checkbox{
-	position: relative;
-	height: 1.25em;
-	width: :1.25em;
-	margin-bottom: -0.25em;
-	margin-right: 5px;
-	vertical-align: top;
+.btn-block{
+	display: black;
+	white-space: normal;
+	width: 100%;
 }
-.menu-item{
-	padding: :12px 0;
-	border-bottom:  1px solid #dce0e0;
-	cursor: pointer;
+.btn{
+	border-color: #c4c4c4;
+	background:white;
+	color: #484848;
+}
+.btn-large{
+	padding: 9px 27px;
+	font-size: 16px;
+}
+.space-top-4{
+	margin-top: 24px;
+}
+.search {
+	margin-top: -8%;
+}
+.search .form-section{
+	background:rgba(0,0,0,0.6);
+	border: 2px solid #414141;
+	border-radius: 5px;
+	padding: 10px;
 }
