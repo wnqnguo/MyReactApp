@@ -6,11 +6,11 @@ export default class SearchBar extends Component{
 			<div className="search">
 			<div className="container">
 				<div className="row">
-					<div className="col-md-10 col-md-offset-1">
+					<div className="col-lg-10 col-md-offset-1">
               <div className="form-section">
                 <div className="row">
                     <form role="form">
-                      <div className="col-md-4">
+                      <div className="col-lg-4">
                         <div className="form-group">
                           <label className="sr-only" for="location">Location</label>
                           <input type="email" className="form-control" id="location" placeholder="Where ?" />
@@ -57,7 +57,7 @@ export default class SearchBar extends Component{
                           </select>
                         </div>
                       </div>
-					<div className="col-md-2">
+					<div className="col-lg-2">
 						<button type="submit" className="btn btn-primary">Submit</button>
 					</div>
                </form>
