@@ -11,12 +11,16 @@ export default class SearchDropDown extends Component{
       endDate: null};
       this.getInitialState = this.getInitialState.bind(this);
       this.handleChange = this.handleChange.bind(this);
+      this.fetchSearchResult = this.fetchSearchResult.bind(this);
 		
 	}
 	getInitialState(){
     return {
       startDate: moment()
     };
+  }
+  fetchSearchResult(event){
+  	this.props.fetchSearchResult(event)
   }
   componentDidMount(){
   	 $('.datepicker').datepicker();
@@ -26,18 +30,11 @@ export default class SearchDropDown extends Component{
       startDate: date
     });
   }
-	onDatesChange({ startDate, endDate }) {
-    	this.setState({ startDate, endDate });
-  	}
-  	onFocusChange(focusedInput) {
-    	this.setState({ focusedInput });
-  	}
+	
 	checkBoxChange(event){
 		console.log("event is",event);
 	}
-	fetchSearchResult(event){
-		alert("clicked");
-	}
+	
 	render(){
 		return(
 			<div id="header-search-settings" className="search-dropdown">

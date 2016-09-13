@@ -8,6 +8,7 @@ export default class NavigationBar extends Component{
 		super(props);
 		this.state = { term: '', showDropDown:false};
 		this.onInputChange = this.onInputChange.bind(this);
+		this.fetchSearchResult = this.fetchSearchResult.bind(this);
 	}
 	onInputChange(event){
 		var autocomplete = new google.maps.places.Autocomplete(ReactDOM.findDOMNode(this.refs.searchInput));
@@ -17,6 +18,10 @@ export default class NavigationBar extends Component{
     	console.log('place',autocomplete.getPlace());
     	
 	});
+	}
+	fetchSearchResult(){
+		this.setState({showDropDown:false});
+		console.log("called parent");
 	}
 	render(){
 		return(
@@ -49,7 +54,7 @@ export default class NavigationBar extends Component{
 			      </NavDropdown>
 			    </Nav>
  			 </Navbar>
- 			 { this.state.showDropDown ? <SearchDropDown className="search-dropdown" /> : null }
+ 			 { this.state.showDropDown ? <SearchDropDown fetchSearchResult={this.fetchSearchResult.bind(this)}className="search-dropdown" /> : null }
 			</div>
 		)
 	}
