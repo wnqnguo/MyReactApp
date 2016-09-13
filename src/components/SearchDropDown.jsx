@@ -1,6 +1,43 @@
 import React, { Component } from'react';
+import ReactDOM from 'react-dom';
+
+import DatePicker from './DatePicker'
+var moment = require('moment');
 export default class SearchDropDown extends Component{
-	
+	constructor(props){
+		super(props);
+		this.state = { focusedInput: null,
+      startDate: null,
+      endDate: null};
+      this.getInitialState = this.getInitialState.bind(this);
+      this.handleChange = this.handleChange.bind(this);
+		
+	}
+	getInitialState(){
+    return {
+      startDate: moment()
+    };
+  }
+  componentDidMount(){
+  	 $('.datepicker').datepicker();
+  }
+  handleChange(date) {
+    this.setState({
+      startDate: date
+    });
+  }
+	onDatesChange({ startDate, endDate }) {
+    	this.setState({ startDate, endDate });
+  	}
+  	onFocusChange(focusedInput) {
+    	this.setState({ focusedInput });
+  	}
+	checkBoxChange(event){
+		console.log("event is",event);
+	}
+	fetchSearchResult(event){
+		alert("clicked");
+	}
 	render(){
 		return(
 			<div id="header-search-settings" className="search-dropdown">
@@ -8,16 +45,12 @@ export default class SearchDropDown extends Component{
 					<div className="row row-condensed">
 						<div className="col-sm-9">
 							<div className="row row-condensed">
-								<div className="col-sm-6" >
-									<label for="header-search-checkin" className="field-label">Check in</label>
-									<input type="text" id="header-search-checkin" placeholder="dd-mm-yyyy"
-									      name="checkin" className="checkin ui-datepicker-target"/>
+							    <div className="col-sm-4">
+								<DatePicker/>
 								</div>
-								<div className="col-sm-6" >
-									<label for="header-search-checkin" className="field-label">Check out</label>
-									<input type="text" id="header-search-checkin" placeholder="dd-mm-yyyy"
-									      name="checkin" className="checkin ui-datepicker-target"/>
-								</div>
+								<div className="col-sm-4">
+								<DatePicker/>
+							</div>
 							</div>
 						</div>
 						<div className="col-sm-3" >
@@ -43,27 +76,27 @@ export default class SearchDropDown extends Component{
 							</div>
 							<div className="panel-body">
 							<div>
-								<label className="checkbox menu-item">
-									<input type="checkbox"/>
+								<label className="menu-item">
+									<input name="radio" type="radio" />
+									<i className="icon icon-private-romom-horizontal-margin-medium"/>
+									<span>Entire home/apt</span>
+								</label>
+								<label className="menu-item">
+									<input name="radio" type="radio" />
 									<i className="icon icon-private-romom-horizontal-margin-medium"/>
 									<span>Private room</span>
 								</label>
-								<label className="checkbox menu-item">
-									<input type="checkbox"/>
+								<label className="menu-item">
+									<input  name="radio" type="radio" onChange={this.checkBoxChange} />
 									<i className="icon icon-private-romom-horizontal-margin-medium"/>
-									<span>Private room</span>
-								</label>
-								<label className="checkbox menu-item">
-									<input type="checkbox"/>
-									<i className="icon icon-private-romom-horizontal-margin-medium"/>
-									<span>Private room</span>
+									<span>Shared room</span>
 								</label>
 							 </div>
 							</div>
 							</div>
 						</fieldset>
 						<div className="panel-body">
-						<button className="btn btn-primary btn-block">
+						<button className="btn btn-primary btn-block" onClick={this.fetchSearchResult}>
 							<i className ="icon icon-search"/>
 							<span>Find a place</span>
 						</button>

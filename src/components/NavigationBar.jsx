@@ -1,7 +1,7 @@
 import React, { Component } from'react';
 import ReactDOM from 'react-dom';
-import SearchDropDown from './SearchDropDown'
-import { Navbar, Nav , NavItem, NavDropdown, MenuItem} from 'react-bootstrap';
+import SearchDropDown from './SearchDropDown';
+import DatePicker from './DatePicker';import { Navbar, Nav , NavItem, NavDropdown, MenuItem} from 'react-bootstrap';
 export default class NavigationBar extends Component{
 	
 	constructor(props){
