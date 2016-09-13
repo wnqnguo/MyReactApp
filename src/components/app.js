@@ -8,9 +8,7 @@ export default class App extends Component {
     return (
       <div>
       	<NavigationBar />
-        <Header />
-        <SearchBar />
-        <Weekend />
+        {this.props.children}
       </div>
     );
   }

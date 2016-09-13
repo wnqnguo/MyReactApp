@@ -44,7 +44,8 @@ export default class NavigationBar extends Component{
 			           onChange={this.onInputChange}></input>
 			        </div>
 			      </form>
-			      
+			      <NavItem eventKey={1} href="#">Become a Host</NavItem>
+      			  <NavItem eventKey={2} href="#">Messages</NavItem>
 			      <NavDropdown eventKey={3} title="Wenqian" id="basic-nav-dropdown" >
 			        <MenuItem eventKey={3.1}>Your Trips</MenuItem>
 			        <MenuItem divider />

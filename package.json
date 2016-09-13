@@ -34,8 +34,6 @@
     "babel-preset-stage-1": "^6.1.18",
     "bootstrap": "^3.3.7",
     "jquery": "^2.2.4",
-    "jquery-datetimepicker": "^2.5.4",
-    "jquery-ui": "1.12.0",
     "lodash": "^3.10.1",
     "react": "^0.14.8",
     "react-bootstrap": "^0.30.3",
@@ -43,7 +41,7 @@
     "react-dates": "^2.1.1",
     "react-dom": "^0.14.3",
     "react-redux": "^4.0.0",
-    "react-router": "^2.0.1",
+    "react-router": "^2.0.0-rc5",
     "redux": "^3.0.4"
   }
 }
